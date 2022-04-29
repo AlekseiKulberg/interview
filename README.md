@@ -48,10 +48,11 @@ ansible-galaxy collection install community.docker
 Для запуска перейдите в корневую директорию проекта и выполните команду:
 ```shell
 vagrant up
+vagrant provision
 ```
->*Note:*  После запуска, vagrant попытается загрузить из сети бокс generic/ubuntu2004. В случае, если загрузка из сети не удалась бокс необходимо добавить вручную из файла ubuntu2004.box с помощью команды:  
+>*Note:*  После запуска, vagrant попытается загрузить из сети бокс generic/ubuntu2004. В случае, если загрузка из сети не удалась бокс необходимо [скачать](https://app.vagrantup.com/generic/) и добавить вручную из файла с помощью команды:  
 >```shell 
->vagrant box add ubuntu2004.box --name generic/ubuntu2004
+>vagrant box add <имя скачанного файла> --name generic/ubuntu2004
 >```
 >После добавления заново запустите vagrant up
 
