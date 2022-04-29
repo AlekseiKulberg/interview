@@ -1,0 +1,20 @@
+---
+- name: Setup containers
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Creating docker directory
+    file:
+      path: /opt/docker   #директория для хранения файлов, необходимых для запуска контейнеров
+      state: directory
+
+  - name: Copying docker-compose files
+    copy:
+      src: docker/
+      dest: /opt/docker/
+
+  - name: Starting docker containers 
+    community.docker.docker_compose:
+      project_src: /opt/docker/
+      build: yes

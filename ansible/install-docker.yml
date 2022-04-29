@@ -1,0 +1,14 @@
+---
+- name: Install docker and node exporter
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Installing docker, docker-compose and prometheus-node-exporter
+    ansible.builtin.apt:
+      name:
+      - docker
+      - docker-compose
+      - prometheus-node-exporter
+      state: latest
+      update_cache: yes

@@ -1,0 +1,28 @@
+version: '2'
+
+networks:
+  monitor_net:
+    driver: bridge
+ 
+services:
+    prometheus:
+      build: 
+        context: prometheus/
+        dockerfile: Dockerfile
+      container_name: prometheus
+      restart: always
+      hostname: prometheus
+      networks:
+        - monitor_net
+
+    grafana:
+      build: 
+        context: grafana/
+        dockerfile: Dockerfile
+      container_name: grafana
+      hostname: grafana
+      restart: always
+      ports:
+          - "3000:3000"
+      networks:
+        - monitor_net
