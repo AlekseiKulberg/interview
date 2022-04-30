@@ -8,7 +8,8 @@
 4. Первый контейнер с [Prometheus](https://prometheus.io/), настроеный на сбор метрик с prometheus-node-exporter из Ubuntu.
 5. Второй контейнер с [Grafana](https://grafana.com/), настроенная на использование в качестве datasource системы мониторинга prometheus из первого контейнера. Также в grafana загружен [Node exporter full dashboard](https://grafana.com/grafana/dashboards/1860) (dashboard 1860), который визуализирует метрики полученные с prometheus-node-exporter.
 6. Контейнер с grafana пробрасывает 3000 порт виртуальную машину ubuntu.
-7. Виртуальная машина ubuntu пробрасывает 3000 порт в хостовую машину.              
+7. Виртуальная машина ubuntu пробрасывает 3000 порт в хостовую машину.      
+        
 После запуска проекта на хостовой машине, по адресу localhost:3000, будет доступен dashboard с метриками виртуальной машины ubuntu.
 
 ## Структура проекта
