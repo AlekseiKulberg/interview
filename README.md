@@ -38,6 +38,7 @@
 В директории ansible хранятся плейбуки и, в папке docker, файлы конфигурации docker-compose 
 
 ## Подготовка к запуску
+Перед запуском проекта необходимо установить пакеты vagrant и ansible, а так же модуль community.docker для asnible
 *Ubuntu*
 ```shell
 sudo apt update
