@@ -37,6 +37,7 @@
 
 В директории ansible хранятся плейбуки и, в папке docker, файлы конфигурации docker-compose 
 
+## Подготовка к запуску
 *Ubuntu*
 ```shell
 sudo apt update
