@@ -9,6 +9,5 @@
       name:
       - docker
       - docker-compose
-      - prometheus-node-exporter
       state: latest
       update_cache: yes
